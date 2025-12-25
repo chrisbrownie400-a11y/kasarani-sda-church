@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tom and Jerry Academy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #0b3c5d;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { font-size: 22px; }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+    .hero {
+      background: linear-gradient(rgba(11,60,93,0.8), rgba(11,60,93,0.8)), url('https://images.unsplash.com/photo-1604881991720-f91add269bed') center/cover;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h2 { font-size: 40px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; }
+    section {
+      padding: 60px 40px;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0b3c5d;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #f9fafb;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h3 { margin-bottom: 10px; }
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .login-box {
+      max-width: 400px;
+      margin: auto;
+      background: #f9fafb;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #0b3c5d;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px; 
+    }
+    .login-box form a {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #0b3c5d;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .login-box form a:hover {
+        text-decoration: underline;
+    }
+    /* Gallery Styles */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px; 
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item p {
+      padding: 15px;
+      background: #f9fafb;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+    /* New Contact Styles */
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 900px;
+        margin: auto;
+        gap: 40px;
+    }
+    .contact-info, .contact-form {
+        flex: 1 1 400px;
+        min-width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        background: #f9fafb;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .contact-info h3 {
+        color: #0b3c5d;
+        margin-bottom: 20px;
+    }
+    .contact-info p {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .contact-info p strong {
+        margin-right: 10px;
+    }
+    .contact-form form input,
+    .contact-form form textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: inherit;
+    }
+    .contact-form form textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+    .contact-form button {
+        background: #0b3c5d;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    footer {
+      background: #0b3c5d;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Tom and Jerry Academy</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#levels">Learning Levels</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a> <a href="#login">Login</a>
+  </nav>
+</header>
+
+<div id="home" class="hero">
+  <h2>Welcome to Tom and Jerry Academy</h2>
+  <p>Building Bright Futures Through Quality Education</p>
+</div>
+
+<section id="levels">
+  <h2>Our Learning Levels</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Early Childhood Level</h3>
+      <p>Strong foundation for young learners through play and creativity.</p>
+    </div>
+    <div class="card">
+      <h3>Primary Level</h3>
+      <p>Competency-based curriculum with academic excellence.</p>
+    </div>
+    <div class="card">
+      <h3>Junior Secondary Level</h3>
+      <p>Preparing students for future success and leadership.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>School Gallery - Learning Activities</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1541339907198-e0875663f974" alt="Science Fair Activity">
+      <p>🔬 2025 Science Fair Projects</p>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1560785463-71bd1f034070" alt="Sports Day">
+      <p>🏆 Annual Inter-House Sports Day</p>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1577896851221-a537f5d023ff" alt="Reading Time">
+      <p>📚 Primary Students during Reading Time</p>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1546410531-bb4ec6323c21" alt="Art Class">
+      <p>🎨 Creative Art Class Session</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about">
+    <p>
+      Tom and Jerry Academy is committed to nurturing academic excellence,
+      discipline, and moral values. Our experienced teachers and modern
+      facilities ensure holistic development for every learner.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>School Administration</h3>
+            <p><strong>📍 Location:</strong> along Utawala Githunguri road at corner B just a few metres from National oil</p>
+            <p><strong>📞 Phone:</strong> 0722830060</p>
+            <p><strong>📧 Email:</strong> tomandjerryacademy@gmail.com</p>
+            <p>We are available from 8:00 AM to 4:00 PM, Monday to Friday.</p>
+        </div>
+        <div class="contact-form">
+            <h3>Send us a Message</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email Address" required />
+                <textarea placeholder="Your Message or Inquiry..." required></textarea>
+                <button type="submit">Submit Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section id="login">
+  <h2>Student / Parent Portal Login</h2>
+  <div class="login-box">
+    <form>
+      <input type="email" placeholder="Email Address / Student ID" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <a href="#">Forgot Password?</a>
+      <a href="#">Access Assignments/Report Book (Guest Link)</a>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Tom and Jerry Academy. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
